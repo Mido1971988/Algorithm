@@ -1,0 +1,124 @@
+
+* Time complexity - Amount of time taken by an algorithm to run, as a function of input size
+* Space complexity - Amount of memory taken by an algorithm to run, as a function of input size
+
+1.Big-O Notation - Worst case complexity
+2.Omega Notation - Best case complexity
+3.Theta Notation - Average case complexity
+
+Big-O notation : 
+    - describes the complexity of an algorithm using algebraic terms
+    - It has two important characteristics : 
+        * It is expressed in terms of the input
+        * It focuses on the bigger picture without getting caught up in the minute details
+
+    - EXP1 :
+    function summation(n) {
+        let sum = 0;
+        for (let i = 1; i <= n; i++) {
+            sum += 1;
+        }
+        return sum;
+    }
+
+    Count the number of times a statement executes based on the input size
+    Here if n = 4 so number of execution is 6 
+    1 execution:  let sum = 0;
+    4 executions: sum +=1;
+    1 execution : return sum;
+
+    So the algorithm here is n + 2 ( so numbers of execution depended on input size ) 
+    If n = 10 so n+2 = 12 executions 
+    If n = 1000 so n+2 = 1002 executions ( we can consider it 1000 ) 
+    So we can consider time complexity O(n) linear 
+
+    - EXP2 :
+    function summation(n) {
+        return (n * (n + 1)) / 2;
+    }
+
+    time complexity O(1) constant 
+    ( so numbers of execution does not depend on input size (n argument ) 
+        return statment will be executed only once)
+    
+    - Exp3:
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= i; i++) {
+        //Some code
+        }
+    }
+
+    Time Complexity O(n2) - Quadratic 
+
+    - EXP4 :
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= i; i++) {
+            for (k = 1; k <= j; k++) {
+                //Some code
+            }
+        }
+    }
+
+Time Complexity O(n3) - Cubic
+
+* Object Big-O Notation:
+
+    Insert - O(1)
+    Remove - O(1)
+    Access - O(1)
+    Search - O(n)
+    Object.keys()-O(n)
+    Object.values()-O(n)
+
+* Array Big-O Notation:
+
+    Insert / remove at end - O(1)
+    Insert / remove at beginning - O(n)
+    Access - O(1)
+    Search - O(n)
+    Push / pop -O(1)
+    Shift / unshift / concat slice / splice - O(n)
+    forEach / map / filter / reduce - O(n)
+
+----- Math algorithm
+* Fibonacci sequence ( see Exp. in main.js)
+ 
+    the Fibonacci sequence is a sequence in which each number is the sum of the two preceding ones.
+    The first two numbers in the sequence are 0 and 1.
+    fibonacci(2) = [0,1]
+    fibonacci(3) = [0,1,1]
+    fibonacci(7) = [0,1,1,2,3,5,8]
+
+    Big-O = O(n) linear ( because for loop inside function)
+
+* Factorial of a number ( see Exp. in main.js)
+
+    In mathematics, the factorial of a non-negative integer 'n', denoted n!, 
+    is the product of all positive integers less than or equal to 'n'.
+
+    Factorial of zero is 1.
+    factorial(4) = 4*3*2*1 = 24
+    factorial(5) = 5*4*3*2*1 = 120
+
+    Big-O = O(n) linear ( because for loop inside function)
+
+* Prime Number ( see Exp. in main.js) : 
+
+    A prime number is a natural number greater than 1 that is not a product of two smaller natural numbers.
+    isPrime(5) = true (1*5 or 5*1)
+    isPrime(4) = false ( 1*4 or 2*2 or 4*1)
+
+    Big-O = O(n) linear ( because for loop inside function)
+
+    - with optimized solution ( see main.js)
+    - Optimized Primality Test
+        Integers larger than the square root do not need to be checked because,
+        whenever 'n=a*b', one of the two factors 'a' and 'b' is less than or equal to the square root of 'n' n=24, a=4 and b=6
+        The square root of 24 is 4.89
+        4 is less than 4.89
+        a is less than the square root of n n=35, a=5 and b=7
+        The square root of 35 is 5.91
+        5 is less than 5.91
+        a is less than the square root of n
+    Big-O = O(sqrt(n))
+
