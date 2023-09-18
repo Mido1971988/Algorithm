@@ -104,3 +104,70 @@
 // console.log(isPrime(1))
 // console.log(isPrime(5))
 // console.log(isPrime(4))
+
+//-------Power of Two 
+//Problem - Give a positive integer 'n', determine if the number is a power of 2 or not
+
+// my solution 
+// function isPowerOfTwo(n){
+//     if(  n % 2 === 0 || n === 1) return true
+//     return false
+// }
+
+// console.log(isPowerOfTwo(1)) // true
+// console.log(isPowerOfTwo(2)) // true
+// console.log(isPowerOfTwo(5)) // false
+// console.log(isPowerOfTwo(8)) // true
+
+// Vishwas Solution
+// function isPowerOfTwo(n){
+//     if(n < 1) return false
+//     while(n>1){
+//         if (n%2 !== 0) return false
+//         n = n /2
+//     }
+//     return true
+// }
+
+// console.log(isPowerOfTwo(1)) // true
+// console.log(isPowerOfTwo(2)) // true
+// console.log(isPowerOfTwo(5)) // false
+// console.log(isPowerOfTwo(8)) // true
+
+// optimized solution ( Bitwise operator) ( see video () at 6:04 to understand)
+// function isPowerOfTwoBitWise(n){
+//     if(n < 1) return false
+//     return ( n & ( n-1))  === 0
+// }
+
+// console.log(isPowerOfTwoBitWise(1)) // true
+// console.log(isPowerOfTwoBitWise(2)) // true
+// console.log(isPowerOfTwoBitWise(5)) // false
+// console.log(isPowerOfTwoBitWise(8)) // true
+
+//---------Recursive Fibonacci sequence 
+// Problem - Give a number 'n', find the nth element of the Fibonacci sequence
+
+// my solution ( but this is not Recursive solution)
+// function recursiveFibonacci(n){
+//     let arr = [0 , 1] ; 
+//     for(let i = 2 ; i <= n ; i++){
+//         arr[i] = arr[i-1] + arr[i-2]   
+//     }
+//     return arr[n]
+// }
+
+// console.log(recursiveFibonacci(0))
+// console.log(recursiveFibonacci(1))
+// console.log(recursiveFibonacci(6))
+
+// Vishwas Solution
+function recursiveFibonacci(n){
+    if(n < 2 ) return n // Base case
+    return recursiveFibonacci(n-1) + recursiveFibonacci( n-2 ) // Recursive Step
+}
+
+console.log(recursiveFibonacci(0))
+console.log(recursiveFibonacci(1))
+console.log(recursiveFibonacci(6))
+

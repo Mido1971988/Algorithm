@@ -122,3 +122,35 @@ Time Complexity O(n3) - Cubic
         a is less than the square root of n
     Big-O = O(sqrt(n))
 
+* Power of Two  ( see Exp. in main.js) :
+    Problem - Give a positive integer 'n', determine if the number is a power of 2 or not
+    An integer is a power of two if there exists an integer 'x' such that 'n' === 2x
+    isPowerOfTwo(1) = true (2 power 0)
+    isPowerOfTwo(2) = true (2 power 1)
+    isPowerOfTwo(5) = false
+
+    Vishwas solution Big-O = O(logn)
+    My solution Big-O = O(1)
+    Optimized solution (Bitwise operator solution) Big-O = O(1)
+
+* recursive algorithm : 
+    A recursive algorithm simplifies a problem by breaking it down into sub-problems of the same type. 
+    The output of one recursion becomes the input for another recursion.
+    It assists you in breaking down large complex problems into smaller ones.
+     
+    - recursive algorithm consists of :
+    [1] Base case, which consists of a state and condition that ends the recursive function
+    [2] Recursive Step: It computes the output by reaching the same function repeatedly but with smaller or more complex inputs.
+
+* Recursive Fibonacci sequence ( see Exp. in main.js) :
+    Problem - Give a number 'n', find the nth element of the Fibonacci sequence
+    In mathematics, the Fibonacci sequence is a sequence in which each number is the sum of the two preceding ones.
+    The first two numbers in the sequence are 0 and 1. (0, 1, 1, 2, 3, 5, 8...)
+    recursiveFibonacci(0) = 0
+    recursiveFibonacci(1) = 1
+    recursiveFibonacci(6) = 8
+
+    Recursive solution (Vishwas Solution) Big-O = O(2^n) 
+    iteration solution ( my Solution) Big-O = O(n)
+    so iteration solution is better performance than Recursive solution for Fibonacci sequence
+
