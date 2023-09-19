@@ -154,3 +154,25 @@ Time Complexity O(n3) - Cubic
     iteration solution ( my Solution) Big-O = O(n)
     so iteration solution is better performance than Recursive solution for Fibonacci sequence
 
+* Recursive Factorial of a number ( see Exp. in main.js)
+
+    In mathematics, the factorial of a non-negative integer 'n', denoted n!, 
+    is the product of all positive integers less than or equal to 'n'.
+
+    recursiveFactorial of zero is 1.
+    recursiveFactorial(4) = 4*3*2*1 = 24
+    recursiveFactorial(5) = 5*4*3*2*1 = 120
+
+    Big-O = O(n) linear 
+
+* Search algorithm
+    [1] linear
+    [2] Binary
+    [3] Recursive Binary
+
+* Linear Search  ( see Exp. in main.js)
+    Problem - Given an array of 'n' elements and a target element 't', 
+    find the index of 't' in the array. Return -1 if the target element is not found.
+
+    Big-O = O(n) linear
+

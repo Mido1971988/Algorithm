@@ -162,12 +162,38 @@
 // console.log(recursiveFibonacci(6))
 
 // Vishwas Solution
-function recursiveFibonacci(n){
-    if(n < 2 ) return n // Base case
-    return recursiveFibonacci(n-1) + recursiveFibonacci( n-2 ) // Recursive Step
+// function recursiveFibonacci(n){
+//     if(n < 2 ) return n // Base case
+//     return recursiveFibonacci(n-1) + recursiveFibonacci( n-2 ) // Recursive Step
+// }
+
+// console.log(recursiveFibonacci(0))
+// console.log(recursiveFibonacci(1))
+// console.log(recursiveFibonacci(6))
+
+// -------Recursive Factorial of a number
+// Problem - Give an integer 'n', find the factorial of that integer
+
+// function recursiveFactorial(n){
+//     if(n === 0 ) return 1; // base case
+//     return n * recursiveFactorial(n - 1); // Recursive Step
+// }
+
+// console.log(recursiveFactorial(0))
+// console.log(recursiveFactorial(1))
+// console.log(recursiveFactorial(5))
+
+//--------- Linear Search
+// Problem - Given an array of 'n' elements and a target element 't', 
+//find the index of 't' in the array. Return -1 if the target element is not found.
+
+function linearSearch(arr , n) {
+    for(let i = 0; i < arr.length; i++){
+        if(n == arr[i]) return i
+    }
+    return -1
 }
 
-console.log(recursiveFibonacci(0))
-console.log(recursiveFibonacci(1))
-console.log(recursiveFibonacci(6))
-
+console.log(linearSearch([-5, 2, 10, 4, 6],10))
+console.log(linearSearch([-5, 2, 10, 4, 6],6))
+console.log(linearSearch([-5, 2, 10, 4, 6],20))
