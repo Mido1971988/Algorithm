@@ -187,13 +187,164 @@
 // Problem - Given an array of 'n' elements and a target element 't', 
 //find the index of 't' in the array. Return -1 if the target element is not found.
 
-function linearSearch(arr , n) {
-    for(let i = 0; i < arr.length; i++){
-        if(n == arr[i]) return i
-    }
-    return -1
+// function linearSearch(arr , n) {
+//     for(let i = 0; i < arr.length; i++){
+//         if(n == arr[i]) return i
+//     }
+//     return -1
+// }
+
+// console.log(linearSearch([-5, 2, 10, 4, 6],10))
+// console.log(linearSearch([-5, 2, 10, 4, 6],6))
+// console.log(linearSearch([-5, 2, 10, 4, 6],20))
+
+//---------Binary Search 
+// Problem - Given a sorted array of 'n' elements and a target element 't', find the index of 't' in the array. 
+// Return -1 if the target element is not found.
+
+// My solution ( but not 100% Binary search because first and second half also should be divided)
+
+// function binarySearch(arr , n) {
+//     let sorrtedArr = arr.sort((a,b)=> a - b)
+//     if(arr.length === 0 ) return -1
+//     if(arr.length % 2 !== 0) {
+//         const middleIndex = Math.floor(arr.length / 2)
+//         const firstHalf = sorrtedArr.slice(0,middleIndex)
+//         const secondHalf = sorrtedArr.slice(middleIndex + 1)
+//         if(sorrtedArr[middleIndex] === n ) return sorrtedArr[middleIndex]
+//         if( n < sorrtedArr[middleIndex]) {
+//             for(let i = 0; i < firstHalf.length; i++ ){
+//                 if(firstHalf[i] === n ) return `${firstHalf[i]} from First Half`
+//             }
+//         } else if(n > sorrtedArr[middleIndex]){
+//             for(let i = 0; i < secondHalf.length; i++ ){
+//                 if(secondHalf[i] === n ) return `${secondHalf[i]} from second Half`
+//             }
+//         }
+//     }
+//     return -1
+// }
+
+// console.log(binarySearch([],10))
+// console.log(binarySearch([-5, 2, 10, 4, 6],10))
+// console.log(binarySearch([-5, 2, 10, 4, 6],4))
+// console.log(binarySearch([-5, 2, 10, 4, 6],-5))
+// console.log(binarySearch([-5, 2, 10, 4, 6],20))
+
+// Vishwas Solution
+// function binarySearch(arr, target) {
+//     let leftIndex = 0
+//     let rightIndex = arr.length - 1
+
+//     while (leftIndex <= rightIndex) {
+//         let middleIndex = Math.floor((leftIndex + rightIndex) / 2)
+//             if (target === arr[middleIndex]) {
+//             return middleIndex
+//         }
+//         if (target < arr[middleIndex]) {
+//             rightIndex = middleIndex - 1
+//         } else {
+//             leftIndex = middleIndex + 1
+//         }
+//     }
+//     return -1
+// }
+
+// console.log(binarySearch([-5, 2, 4, 6, 10], 10)) // 4
+// console.log(binarySearch([-5, 2, 4, 6, 10], 6)) // 3
+// console.log(binarySearch([-5, 2, 4, 6, 10], 20)) // -1
+
+//---------Recursive Binary Search
+
+// my solution
+// function recursiveBinarySearch(arr, target , lIndex  , rIndex) {
+//     let leftIndex = lIndex || 0
+//     let rightIndex = rIndex || arr.length - 1
+
+//     if(leftIndex > rightIndex) return -1 // base case 
+
+//     let middleIndex = Math.floor((leftIndex + rightIndex) / 2)
+//         if (target === arr[middleIndex]) {
+//             return middleIndex
+//         }
+//         if (target < arr[middleIndex]) {
+//             rightIndex = middleIndex - 1
+//         } else if(target > arr[middleIndex]) {
+//             leftIndex =  middleIndex + 1
+//         }
+//     return recursiveBinarySearch(arr , target , leftIndex , rightIndex ) // Recursive Step
+// }
+
+// console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 10)) // 4
+// console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 6)) // 3
+// console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 2)) // 1
+// console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 20)) // -1
+// console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], -20)) // -1
+
+// Vishwas Solution
+// function recursiveBinarySearch(arr, target) {
+//         return search(arr, target, 0, arr.length - 1)
+//     }
+    
+//     function search(arr, target, leftIndex, rightIndex) {
+//         if (leftIndex > rightIndex) {
+//             return -1
+//         }
+    
+//         let middleIndex = Math.floor((leftIndex + rightIndex) / 2)
+//         if (target === arr[middleIndex]) {
+//             return middleIndex
+//         }
+    
+//         if (target < arr[middleIndex]) {
+//             return search(arr, target, leftIndex, middleIndex - 1)
+//         } else {
+//             return search(arr, target, middleIndex + 1, rightIndex)
+//         }
+// }
+
+//   console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 10)) // 4
+//   console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 6)) // 3
+//   console.log(recursiveBinarySearch([-5, 2, 4, 6, 10], 20)) // -1
+
+//---------Bubble Sort 
+
+// my solution
+// function bubbleSort(arr){
+//     let notSorted = true; 
+//     while(notSorted){
+//         for(let i = 0; i < arr.length - 1; i++){
+//             notSorted = false;
+//             if(arr[i] > arr[i+1]) {
+//                 let small = arr[i+1]
+//                 let large = arr[i]
+//                 arr[i] = small
+//                 arr[i+1] = large
+//                 notSorted = true;
+//             }
+//         }
+//     }
+//     return arr
+// }
+
+// console.log(bubbleSort([-6,20,8,-2,4]))
+
+// Vishwas Solution
+function bubbleSort(arr) {
+    let swapped
+    do {
+        swapped = false
+        for (let i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+            let temp = arr[i]
+            arr[i] = arr[i + 1]
+            arr[i + 1] = temp
+            swapped = true
+            }
+        }
+    } while (swapped)
 }
 
-console.log(linearSearch([-5, 2, 10, 4, 6],10))
-console.log(linearSearch([-5, 2, 10, 4, 6],6))
-console.log(linearSearch([-5, 2, 10, 4, 6],20))
+const arr = [8, 20, -2, 4, -6]
+bubbleSort(arr)
+  console.log(arr) // [-6, -2, 4, 8, 20]

@@ -11,7 +11,10 @@ Big-O notation :
     - It has two important characteristics : 
         * It is expressed in terms of the input
         * It focuses on the bigger picture without getting caught up in the minute details
-
+    * note : 
+        - loop => Big O = O(n)
+        - loop inside loop Big O = O(n ^ 2)
+        - reduceed by half O = O(log n)
     - EXP1 :
     function summation(n) {
         let sum = 0;
@@ -176,3 +179,29 @@ Time Complexity O(n3) - Cubic
 
     Big-O = O(n) linear
 
+* Binary Seacrh ( see Exp. in main.js) : 
+    Problem - Given a sorted array of 'n' elements and a target element 't', find the index of 't' in the array. 
+    Return -1 if the target element is not found.
+
+    Binary search pseudocode: 
+        [1] If the array is empty, return -1 as the element cannot be found.
+        [2] If the array has elements, find the middle element in the array. If target is equal to the middle element, return the middle element index.
+        [3] If target is less than the middle element, binary search left half of the array.
+        [4] If target is greater than middle element, binary search right half of the array.
+    
+    Big-O = O(log n) 
+
+* Recursive Binary Search ( see Exp. in main.js) :
+
+    Big-O = O(log n) 
+
+* Sorting algorithm
+    [1] Bubble Sort
+    [2] Insertion Sort
+    [3] Quick Sort
+    [4] Merge Sort
+
+* Bubble Sort ( see Exp. in main.js):
+    compare every two numbers in the array and swap and repeat this loop till sorting all numbers
+
+    Big-O = O(n ^ 2) 
