@@ -201,7 +201,17 @@ Time Complexity O(n3) - Cubic
     [3] Quick Sort
     [4] Merge Sort
 
-* Bubble Sort ( see Exp. in main.js):
-    compare every two numbers in the array and swap and repeat this loop till sorting all numbers
+* Bubble Sorting ( see Exp. in main.js):
+    compare every two adjacent numbers in the array and swap and repeat this loop till sorting all numbers
 
     Big-O = O(n ^ 2) 
+
+* Insertion Sorting ( see Exp. in main.js): : 
+    - difference between Bubble Sorting and Insertion Sorting : 
+        [1] Bubble sorting compare every two adjacent numbers and swap and repeat this loop till array is sorted 
+            (https://youtube.com/shorts/e30RDr-A4T8?si=vII103GN-COD8A9R)
+
+        [2] Insertion sorting compare one number to each number behind it and put this number in it's right position 
+            ( https://youtube.com/shorts/ZZ-Oz1IFfPg?si=4jkeyJx67r4RyiUh) 
+
+    Big-O = O(n ^ 2) (but better berformance than Bubble Sorting)

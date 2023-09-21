@@ -316,10 +316,7 @@
 //         for(let i = 0; i < arr.length - 1; i++){
 //             notSorted = false;
 //             if(arr[i] > arr[i+1]) {
-//                 let small = arr[i+1]
-//                 let large = arr[i]
-//                 arr[i] = small
-//                 arr[i+1] = large
+//                 [arr[i], arr[i+1]] = [arr[i+1] , arr[i]];
 //                 notSorted = true;
 //             }
 //         }
@@ -330,21 +327,65 @@
 // console.log(bubbleSort([-6,20,8,-2,4]))
 
 // Vishwas Solution
-function bubbleSort(arr) {
-    let swapped
-    do {
-        swapped = false
-        for (let i = 0; i < arr.length - 1; i++) {
-            if (arr[i] > arr[i + 1]) {
-            let temp = arr[i]
-            arr[i] = arr[i + 1]
-            arr[i + 1] = temp
-            swapped = true
-            }
-        }
-    } while (swapped)
-}
+// function bubbleSort(arr) {
+//     let swapped
+//     do {
+//         swapped = false
+//         for (let i = 0; i < arr.length - 1; i++) {
+//             if (arr[i] > arr[i + 1]) {
+//             let temp = arr[i]
+//             arr[i] = arr[i + 1]
+//             arr[i + 1] = temp
+//             swapped = true
+//             }
+//         }
+//     } while (swapped)
+// }
 
-const arr = [8, 20, -2, 4, -6]
-bubbleSort(arr)
-  console.log(arr) // [-6, -2, 4, 8, 20]
+// const arr = [8, 20, -2, 4, -6]
+// bubbleSort(arr)
+//   console.log(arr) // [-6, -2, 4, 8, 20]
+
+//---------------Insertion Sorting
+
+// my solution 
+
+// function insertSort(arr){
+//     for(let i = 0; i < arr.length-1; i++){
+//         let nti = arr[i+1];
+//         for(let x = i; x >= 0; x--){
+//             if(arr[x] > nti){
+//                     arr[x + 1] = arr[x] 
+//                     arr[x] = nti
+//                     console.log(arr)
+//                 }
+//             }
+//         }
+//     return arr
+// }
+
+
+// console.log(insertSort([5,2,3,4,1]))
+// console.log(insertSort([5,4,3,2,1]))
+// console.log(insertSort([-6, 20, 8, -2, 4]))
+
+// Vishwas Solution
+// function insertionSort(arr) {
+//     for (let i = 1; i < arr.length; i++) {
+//         let numberToInsert = arr[i]
+//         let j = i - 1
+//         while (j >= 0 && arr[j] > numberToInsert) {
+//             arr[j + 1] = arr[j]
+//             j = j - 1
+//             console.log(arr)
+//         }
+//         arr[j + 1] = numberToInsert
+//     }
+// }
+
+// const arr = [8, 20, -2, 4, -6]
+// const arr = [5,4,3,2,1]
+// insertionSort(arr)
+// console.log(arr) // [-6, -2, 4, 8, 20]
+
+
