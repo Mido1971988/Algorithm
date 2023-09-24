@@ -389,3 +389,50 @@
 // console.log(arr) // [-6, -2, 4, 8, 20]
 
 
+//--------------quick Sorting ( recursive) 
+
+// function quickSort(arr){
+//     if(arr.length < 2) return arr; // base case
+//     const pivot = arr.pop();
+//     let leftArr = [];
+//     let rightArr = [];
+//     for(let i = 0; i < arr.length ; i++){
+//         if(arr[i] < pivot){
+//             leftArr.push(arr[i])
+//         }else{
+//             rightArr.push(arr[i])
+//         }
+//     }
+//     return [ ...quickSort(leftArr) , pivot , ...quickSort(rightArr) ] // recursive step
+// }
+
+// console.log(quickSort([-6, 20, 8, -2, 4]))
+
+
+//-----------Merge Sorting 
+
+function mergesort(arr) {
+    if (arr.length < 2) {
+        return arr
+    }
+    const mid = Math.floor(arr.length / 2)
+    const leftArr = arr.slice(0, mid)
+    const rightArr = arr.slice(mid)
+    return merge(mergesort(leftArr), mergesort(rightArr))
+}
+
+function merge(leftArr, rightArr) {
+    const sortedArr = []
+    while (leftArr.length && rightArr.length) {
+        if (leftArr[0] <= rightArr[0]) {
+            sortedArr.push(leftArr.shift())
+        } else {
+            sortedArr.push(rightArr.shift())
+        }
+    }
+    const resultArr = [...sortedArr, ...leftArr, ...rightArr]
+    return resultArr
+}
+
+const arr = [8, 20, -2, 4, -6]
+console.log(mergesort(arr)) // [-6, -2, 4, 8, 20]
