@@ -237,3 +237,45 @@ Time Complexity O(n3) - Cubic
         array remaining . that will be sorted array
 
     Big-O = O(nlogn)
+
+* Cartesian product( see Exp. in main.js):
+    Problem - Given two finite non-empty sets, find their Cartesian Product.
+    In mathematics, specifically set theory, the Cartesian product of two sets A and B, 
+    denoted AxB, is the set of all ordered pairs (a, b) where a is in A and b is in B
+    
+    const A = [1, 2]
+    const B = [3, 4]
+    
+    AxB = [ [1, 3], [1, 4], [2, 3], [2, 4]]
+    const C = [1, 2]
+    const D = [3, 4, 5]
+    CxD =[  [1, 3], [1, 4], [1, 5], [2, 3], [2, 4], [2, 5] ]
+
+    Big-O = O(mn) 
+    loop inside loop should be n ^ 2 but we have two arrays maybe those arrays with different length 
+    so will be (m x n) not n ^ 2 (n x n)
+
+* Climbing staircase ( see Exp. in main.js):
+    
+    Problem - Given a staircase of 'n' steps, count the number of distinct ways to climb to the top.
+    You can either climb 1 step or 2 steps at a time.
+    n=1, climbingStaircase(1) = 1 (1)
+    n=2, climbingStaircase(2) =2 (1, 1) and (2)
+    n=3, climbingStaircase(3) =3 (1,1,1) (1, 2) and (2, 1)
+    n=4, climbingStaircase(4) = 5 (1,1,1,1) (1,1,2) (1,2,1) (2,1,1) and (2,2)
+
+    n4 => sum of steps of n3 and n2 so steps of n4 is 5
+    n5 => sum of steps of n4 and n3 so steps of n5 is 8
+
+    Big-O = O(n) linear
+
+* Tower of Hanio ( see Exp. in main.js):
+
+Tower of Hanoi
+The objective of the puzzle is to move the entire stack to the last rod, obeying the following rules:
+    * Only one disk may be moved at a time.
+    * Each move consists of taking the upper disk from one of the stacks 
+        and placing it on top of another stack or on an empty rod. And lastly,
+    * smaller disk should be on the top.
+
+    Big-O = O(2^n)

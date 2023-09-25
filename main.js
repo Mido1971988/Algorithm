@@ -411,28 +411,85 @@
 
 //-----------Merge Sorting 
 
-function mergesort(arr) {
-    if (arr.length < 2) {
-        return arr
+// function mergesort(arr) {
+//     if (arr.length < 2) {
+//         return arr
+//     }
+//     const mid = Math.floor(arr.length / 2)
+//     const leftArr = arr.slice(0, mid)
+//     const rightArr = arr.slice(mid)
+//     return merge(mergesort(leftArr), mergesort(rightArr))
+// }
+
+// function merge(leftArr, rightArr) {
+//     const sortedArr = []
+//     while (leftArr.length && rightArr.length) {
+//         if (leftArr[0] <= rightArr[0]) {
+//             sortedArr.push(leftArr.shift())
+//         } else {
+//             sortedArr.push(rightArr.shift())
+//         }
+//     }
+//     const resultArr = [...sortedArr, ...leftArr, ...rightArr]
+//     return resultArr
+// }
+
+// const arr = [8, 20, -2, 4, -6]
+// console.log(mergesort(arr)) // [-6, -2, 4, 8, 20]
+
+//-------------cartesian Product
+// function cartesianProduct(arr1,arr2){
+//     let result = [];
+//     for(let i = 0; i < arr1.length; i++){
+//         for(let j = 0; j < arr2.length; j++){
+//             result.push([arr1[i] , arr2[j]])
+//         }
+//     }
+//     return result
+// }
+
+// const arr1 = [1,2];
+// const arr2 = [3,4,5];
+// console.log(cartesianProduct(arr1,arr2))
+
+//----------------Climbing staircase
+
+// my solution ( recursive )
+// function climbingStaircase(n){
+//     if(n < 3) return n
+//     return climbingStaircase(n-1) + climbingStaircase(n-2)
+// }
+
+// console.log(climbingStaircase(1))
+// console.log(climbingStaircase(2))
+// console.log(climbingStaircase(3))
+// console.log(climbingStaircase(4))
+// console.log(climbingStaircase(5))
+
+// Vishwas Solution
+// function climbingStaircase(n){
+//     const noOfWays = [1,2];
+//     for(let i = 2; i < n; i++){
+//         noOfWays[i] = noOfWays[i-1] + noOfWays[i-2]
+//     }
+//     return noOfWays[n-1]
+// }
+// console.log(climbingStaircase(1))
+// console.log(climbingStaircase(2))
+// console.log(climbingStaircase(3))
+// console.log(climbingStaircase(4))
+// console.log(climbingStaircase(5))
+
+// Tower of Hanio
+
+function towerOfHanoi(n, fromRod, toRod, usingRod) {
+    if (n === 1) {
+        console.log(`$Move disk 1 from ${fromRod} to ${toRod}`)
+        return
     }
-    const mid = Math.floor(arr.length / 2)
-    const leftArr = arr.slice(0, mid)
-    const rightArr = arr.slice(mid)
-    return merge(mergesort(leftArr), mergesort(rightArr))
+    towerOfHanoi(n - 1, fromRod, usingRod, toRod)
+    console.log(`Move disk ${n} from ${fromRod} to ${toRod}`)
+    towerOfHanoi(n - 1, usingRod, toRod, fromRod)
 }
 
-function merge(leftArr, rightArr) {
-    const sortedArr = []
-    while (leftArr.length && rightArr.length) {
-        if (leftArr[0] <= rightArr[0]) {
-            sortedArr.push(leftArr.shift())
-        } else {
-            sortedArr.push(rightArr.shift())
-        }
-    }
-    const resultArr = [...sortedArr, ...leftArr, ...rightArr]
-    return resultArr
-}
-
-const arr = [8, 20, -2, 4, -6]
-console.log(mergesort(arr)) // [-6, -2, 4, 8, 20]
+towerOfHanoi(3, 'A', 'C', 'B')
