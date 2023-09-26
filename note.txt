@@ -327,3 +327,47 @@ Time Complexity O(n3) - Cubic
         *   Trees
         *   Graphs
 
+* Array : 
+    An array is a data structure that can hold a collection of values
+    Arrays can contain a mix of different data types. You can store strings, booleans, numbers or even objects all in the same array
+    Arrays are resizable. You don't have to declare the size of an array before creating it
+    JavaScript arrays are zero-indexed and the insertion order is maintained
+    Arrays are iterables. They can be used with a for of loop
+
+* Array - Big-O time complexity: 
+    Insert / remove from end - 0(1)
+    Insert / remove from beginning - O(n) ( because will change index of all items)
+    Access - O(1)
+    Search - O(n)
+    Push / pop - 0(1)
+    Shift / unshift / concat / slice / splice - O(n)
+    forEach / map / filter / reduce - O(n)
+
+
+* Object
+    An object is an unordered collection of key-value pairs. 
+    The key must either be a string or symbol data type where as the value can be of any data type To retrieve a value, 
+    you can use the the corresponding key. This can be achieved using the dot notation or bracket notation
+    An object is not an iterable. You cannot use it with a for of loop
+
+Object - Big-O time complexity
+Insert - O(1)
+Remove - 0(1)
+Access - 0(1)
+Search - 0 (n)
+Object.keys() - O(n)
+Object.values() - O(n)
+Object.entries() - O(n)
+
+* Set
+    A set is a data structure that can hold a collection of values. The values however must be unique
+    Set can contain a mix of different data types. You can store strings, booleans, numbers or even objects all in the same set
+    Sets are dynamically sized. You don't have to declare the size of a set before creating it
+    Sets do not maintain an insertion order
+    Sets are iterables. They can be used with a for of loop
+
+- Set vs Array
+    Arrays can contain duplicate values whereas Sets cannot
+    Insertion order is maintained in arrays but it is not the case with sets
+    Searching and deleting an element in the set is faster compared to arrays 
+        because ( they use a hash table internally ( where each data value has its own unique index value ) for storing data and can be used to replace duplicates from other data types)
