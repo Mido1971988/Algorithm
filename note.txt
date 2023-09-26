@@ -296,3 +296,34 @@ Time Complexity O(n3) - Cubic
     *   Finding permutations and combinations of a list of numbers
     *   Finding the longest common substring in a given string
     *   Knapsack problem
+
+------------------------------------------
+****** Data Structure
+
+* What is a data structure?
+    A data structure is a way to store and organize data so that it can be used efficiently
+    A data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to that data
+
+* Why learn data structures? contd.
+    The difference between a function taking a few milliseconds vs a few seconds or even minutes comes down to the selection of the right data structure
+    Data structures help you solve problems in a more efficient way, both in terms of time and memory
+
+    DOM - Tree data structure
+    Browser back and forward - Stack data structure
+    OS job scheduling - Queue data structure
+
+* Course overview
+    [1] Built in data structures
+        *   Arrays
+        *   Objects
+        *   Sets
+        *   Maps
+    [2] Custom data structures
+        *   Stacks
+        *   Queues
+        *   Circular queues
+        *   Linked lists
+        *   Hash tables
+        *   Trees
+        *   Graphs
+
