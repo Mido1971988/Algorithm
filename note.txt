@@ -371,3 +371,40 @@ Object.entries() - O(n)
     Insertion order is maintained in arrays but it is not the case with sets
     Searching and deleting an element in the set is faster compared to arrays 
         because ( they use a hash table internally ( where each data value has its own unique index value ) for storing data and can be used to replace duplicates from other data types)
+
+
+* Мар
+    A map is an unordered collection of key-value pairs. 
+    Both keys and values can be of any data type
+    To retrieve a value, you can use the the corresponding key Maps are iterables. 
+    They can be used with a for of loop
+
+* Object vs Map
+    - Objects are unordered whereas maps are ordered
+    - Keys in objects can only be string or symbol type whereas in maps, 
+        they can be of any type An object has a prototype and may contain a few default keys which may collide with your own keys if you're not careful. 
+        A map on the other hand does not contain any keys by default
+    - Objects are not iterables where as maps are iterables
+    - The number of items in an object must be determined manually where as it is readily available with the size property in a map
+    - Apart from storing data, you can attach functionality to an object whereas maps are restricted to just storing data
+
+
+* Stack
+    The stack data structure is a sequential collection of elements that follows the principle of Last In First Out (LIFO)
+    The last element inserted into the stack is first element to be removed
+    A stack of plates. The last plate placed on top of the stack is also the first plate removed from the stack.
+    Stack is an abstract data type. It is defined by its behavior rather than being a mathematical model
+    The Stack data structure supports two main operations
+        - Push, which adds an element to the collection
+        - Pop, which removes the most recently added element from the collection
+
+
+
+* Queue
+    The queue data structure is a sequential collection of elements that follows the principle of First In First Out (FIFO)
+    The first element inserted into the queue is first element to be removed
+    A queue of people. People enter the queue at one end (rear/tail) and leave the queue from the other end (front/ head).
+    Queue is an abstract data type. It is defined by its behavior rather than being a mathematical model
+    The Queue data structure supports two main operations
+        - Enqueue, which adds an element to the rear/tail of the collection
+        - Dequeue, which removes an element from the front head of the collection
