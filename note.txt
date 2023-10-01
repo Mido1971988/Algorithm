@@ -397,7 +397,7 @@ Object.entries() - O(n)
     The Stack data structure supports two main operations
         - Push, which adds an element to the collection
         - Pop, which removes the most recently added element from the collection
-
+    - Stack implementation video (https://youtu.be/SbjATifB2M8?si=FbgLnn-c0l-Gpg9o)
 
 
 * Queue
@@ -408,3 +408,18 @@ Object.entries() - O(n)
     The Queue data structure supports two main operations
         - Enqueue, which adds an element to the rear/tail of the collection
         - Dequeue, which removes an element from the front head of the collection
+
+    - you can optimize Queue ( Enqueue and Dequeue ) to convert Big-O = O(n) to Big-O = O(1) see video ( https://youtu.be/ba15sgOiAOg?si=4v0wC7zjbmsdu_MW )
+
+    -Queue implementation video (https://youtu.be/NuBWJ7kIlDg?si=VYlwdErJ5XvjcomE)
+
+
+* Circular Queue
+    - The size of the queue is fixed and a single block of memory is used as if the first element is connected to the last element
+    - Also referred to as circular buffer or ring buffer and follows the FIFO principle
+    - A circular queue will reuse the empty block created during the dequeue operation 
+        When working with queues of fixed maximum size, a circular queue is a great implementation choice
+    - The Circular Queue data structure supports two main operations
+        * Enqueue, which adds an element to the rear/tail of the collection
+        * Dequeue, which removes an element from the front/head of the collection
+    - Circle queue implementation video (https://youtu.be/oIR_DOOOACk?si=DHSO3g9p_f7XsmCf)
