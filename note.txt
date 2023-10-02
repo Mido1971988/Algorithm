@@ -423,3 +423,14 @@ Object.entries() - O(n)
         * Enqueue, which adds an element to the rear/tail of the collection
         * Dequeue, which removes an element from the front/head of the collection
     - Circle queue implementation video (https://youtu.be/oIR_DOOOACk?si=DHSO3g9p_f7XsmCf)
+
+* Linked List 
+    - A linked list is a linear data structure that includes a series of connected nodes
+    - Each node consists of a data value and a pointer that points to the next node
+    - The list elements can be easily inserted or removed without reallocation or reorganization of the entire structure
+    - Random access of elements is not feasible and accessing an element has linear time complexity
+    - The linked list data structure supports three main operations
+        Insertion - to add an element at the beginning, end or at a given index in the list 
+        Deletion - to remove an item given its index or value 
+        Search - to find an element given its value
+
