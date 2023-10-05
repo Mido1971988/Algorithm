@@ -414,7 +414,7 @@ Object.entries() - O(n)
     -Queue implementation video (https://youtu.be/NuBWJ7kIlDg?si=VYlwdErJ5XvjcomE)
 
 
-* Circular Queue
+* Circular Queue :
     - The size of the queue is fixed and a single block of memory is used as if the first element is connected to the last element
     - Also referred to as circular buffer or ring buffer and follows the FIFO principle
     - A circular queue will reuse the empty block created during the dequeue operation 
@@ -424,7 +424,7 @@ Object.entries() - O(n)
         * Dequeue, which removes an element from the front/head of the collection
     - Circle queue implementation video (https://youtu.be/oIR_DOOOACk?si=DHSO3g9p_f7XsmCf)
 
-* Linked List 
+* Linked List :
     - A linked list is a linear data structure that includes a series of connected nodes
     - Each node consists of a data value and a pointer that points to the next node
     - The list elements can be easily inserted or removed without reallocation or reorganization of the entire structure
@@ -434,3 +434,34 @@ Object.entries() - O(n)
         Deletion - to remove an item given its index or value 
         Search - to find an element given its value
 
+
+* Hash Table :
+    A hash table, also known as hash map, is a data structure that is used to store key-value pairs
+    Given a key, you can associate a value with that key for very fast lookup JavaScript's Object is a special implementation of the hash table data structure.
+    However, Object class adds its own keys. Keys that you input may conflict and overwrite the inherited default properties
+    Maps which were introduced in 2015 allow you to store key-value pairs
+    Writing your own hash table implementation is a very popular JavaScript interview
+    question
+
+* Hash Table contd. :
+    We store the key value pairs in a fix sized array
+    Arrays have a numeric index
+    How do we go from using a string as an index to number as an index?
+    A hashing function accepts the string key, converts it into a hash code using a defined logic 
+    and then maps it into a numeric index that is within the bounds of the array Using the index, store the value
+    The same hashing function is reused to retrieve the value given a key
+    *   Set to store a key-value pair
+    *   Get to retrieve a value given its key
+    *   Remove to delete a key value pair
+
+* Tree :
+    A tree is a hierarchical data structure that consists of nodes connected by edges
+    A tree is a non-linear data structure, compared to arrays, linked lists, stacks and queues which are linear data structures.
+    In linear data structures, the time required to search is proportional to the size of the data set
+    Trees however, owing to the nonlinear nature allow quicker and easier access to the data
+    A tree will not contain any loops or cycles.
+
+
+* Graph :
+    A graph is a non-linear data structure that consists of a finite number of vertices (also called nodes) connected by edges
+    Trees are a specific type of graph data structure.
